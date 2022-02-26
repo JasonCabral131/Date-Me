@@ -3,6 +3,7 @@ import "./style.scss";
 import date from "./../../../assets/images/date.png";
 import { IoLogoWechat } from "react-icons/io5";
 import photo from "./../../../assets/images/phone-info.png";
+import { RiHeartPulseLine } from "react-icons/ri";
 const Feature = (props) => {
   return (
     <section>
@@ -35,7 +36,17 @@ const Feature = (props) => {
               <button className="download">Download</button>
             </div>
           </div>
-          <div className="feature-content"></div>
+          <div className="feature-content">
+            <div className="feature-content-info">
+              <RiHeartPulseLine size={40} color={"#ff5172"} />
+              <h1>Everything At A Glance</h1>
+              <p>
+                With the nearby list, you can see who is near you and online at
+                anytime. All that's left now is for someone to take the first
+                step
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

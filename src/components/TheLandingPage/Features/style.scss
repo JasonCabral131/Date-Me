@@ -166,3 +166,11 @@
     opacity: 0;
   }
 }
+@media screen and (max-width: 550px) {
+  .feature-content-container {
+    flex-direction: column;
+    .feature-content {
+      width: 98%;
+    }
+  }
+}
