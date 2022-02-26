@@ -46,7 +46,10 @@ const TheHeading = (props) => {
       <div className="header-link">
         <div className="header-link-logo">
           <img src={logo} alt="logo" />
-          <h1 style={{ color: color ? "rgb(34, 34, 34)" : "#ffffff" }}>
+          <h1
+            style={{ color: color ? "rgb(34, 34, 34)" : "#ffffff" }}
+            className="animate-charcter"
+          >
             Date Me
           </h1>
         </div>

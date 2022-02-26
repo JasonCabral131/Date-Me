@@ -13,7 +13,9 @@ const LandingPage = (props) => {
       <div className="cover-page">
         <img src={coverpage} />
         <div className="cover-card">
-          <p className="heading-msg">It Is Never Too Late To Fall In Love</p>
+          <p className="heading-msg landingin-page-title">
+            It Is Never Too Late To Fall In Love
+          </p>
           <p className="heading-context">
             One day, someone will walk into your life and make you see why it
             never worked out with anyone else.
