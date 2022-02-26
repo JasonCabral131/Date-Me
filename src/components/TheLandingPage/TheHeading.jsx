@@ -2,20 +2,60 @@ import React, { useState, useEffect } from "react";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 
 import logo from "./../../assets/images/logo.png";
-const Menu = ({ color, howWorksView }) => {
+const Menu = ({ color, howWorksView, features }) => {
+  const yOffset = -120;
+  const [width, setWidth] = useState(0);
+  const changeBackground = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground, true);
+    return () => window.removeEventListener("scroll", changeBackground);
+  }, []);
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, [window.innerWidth]);
   return (
     <>
-      <p style={{ color: color ? "rgb(65, 65, 65)" : "#ffffff" }}>Features</p>
+      <p
+        style={{
+          color:
+            width < 1050 ? "#ffffff" : color ? "rgb(65, 65, 65)" : "#ffffff",
+        }}
+        onClick={() => {
+          const y =
+            features?.current?.getBoundingClientRect()?.top +
+            window.pageYOffset +
+            yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }}
+      >
+        Features
+      </p>
 
       <p
-        style={{ color: color ? "rgb(65, 65, 65)" : "#ffffff" }}
+        style={{
+          color:
+            width < 1050 ? "#ffffff" : color ? "rgb(65, 65, 65)" : "#ffffff",
+        }}
         onClick={() => {
-          howWorksView?.current.scrollIntoView();
+          const y =
+            howWorksView?.current?.getBoundingClientRect()?.top +
+            window.pageYOffset +
+            yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
         }}
       >
         How it works
       </p>
-      <p style={{ color: color ? "rgb(65, 65, 65)" : "#ffffff" }}>Members</p>
+      <p
+        style={{
+          color:
+            width < 1050 ? "#ffffff" : color ? "rgb(65, 65, 65)" : "#ffffff",
+        }}
+      >
+        Members
+      </p>
     </>
   );
 };
@@ -24,7 +64,6 @@ const TheHeading = (props) => {
   const [color, setColor] = useState(false);
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
-    let innerHeight = window.innerHeight;
     if (window.scrollY > 10) {
       setNavbar(true);
       setColor(true);

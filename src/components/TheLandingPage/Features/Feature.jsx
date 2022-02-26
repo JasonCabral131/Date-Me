@@ -4,9 +4,9 @@ import date from "./../../../assets/images/date.png";
 import { IoLogoWechat } from "react-icons/io5";
 import photo from "./../../../assets/images/phone-info.png";
 import { RiHeartPulseLine } from "react-icons/ri";
-const Feature = (props) => {
+const Feature = ({ features }) => {
   return (
-    <section>
+    <section ref={features} style={{ width: "100%", display: "block" }}>
       <div className="feature-container">
         <h1 className="feature-heading">Match. Chat. Date</h1>
         <div className="feature-content-container">

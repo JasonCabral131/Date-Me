@@ -7,9 +7,10 @@ import HowItWorks from "./HowItWorks/HowItWorks";
 
 const LandingPage = (props) => {
   const howWorksView = useRef();
+  const features = useRef();
   return (
     <div>
-      <TheHeading {...props} howWorksView={howWorksView} />
+      <TheHeading {...props} howWorksView={howWorksView} features={features} />
       <div className="cover-page">
         <img src={coverpage} />
         <div className="cover-card">
@@ -24,7 +25,7 @@ const LandingPage = (props) => {
         </div>
       </div>
       <HowItWorks {...props} howWorksView={howWorksView} />
-      <Feature {...props} />
+      <Feature {...props} features={features} />
     </div>
   );
 };

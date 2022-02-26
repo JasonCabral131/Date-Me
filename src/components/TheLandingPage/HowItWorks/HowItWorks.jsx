@@ -9,7 +9,7 @@ const HowItWorks = ({ howWorksView }) => {
   return (
     <section id="how-it-works" ref={howWorksView}>
       <div className="how-it-works-container">
-        <h1>How It Works</h1>
+        <h1 className="feature-heading">How It Works</h1>
         <div className="how-it-woks-infos">
           <div className="works-info">
             <div className="works-info-img">
