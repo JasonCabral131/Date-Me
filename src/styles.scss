@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@400;500&display=swap");
+:root {
+  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+  --primary: rgb(34, 34, 34);
+  --semi-primary: rgb(65, 65, 65);
+  --secondary: rgb(235, 65, 65);
+  --tertiary: rgb(247, 211, 10);
+  ---quaternary: rgb(75, 75, 247);
+  --color-footer: #031b34;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Display", serif;
+}
