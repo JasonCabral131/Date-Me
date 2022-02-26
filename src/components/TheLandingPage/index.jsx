@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./style.scss";
 import TheHeading from "./TheHeading";
 import coverpage from "./../../assets/images/cover.png";
+import Feature from "./Features/Feature";
+import HowItWorks from "./HowItWorks/HowItWorks";
+
 const LandingPage = (props) => {
+  const howWorksView = useRef();
   return (
     <div>
-      <TheHeading />
+      <TheHeading {...props} howWorksView={howWorksView} />
       <div className="cover-page">
         <img src={coverpage} />
         <div className="cover-card">
@@ -17,6 +21,8 @@ const LandingPage = (props) => {
           <p className="find-love"> FIND A LOVE</p>
         </div>
       </div>
+      <HowItWorks {...props} howWorksView={howWorksView} />
+      <Feature {...props} />
     </div>
   );
 };
